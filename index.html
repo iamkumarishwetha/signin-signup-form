@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn - SignUp</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="tabs">
+                <ul>
+                    <li class="sign_in_li">Sign In</li>
+                    <li class="sign_up_li">Sign Up</li>
+                </ul>
+            </div>
+            <div class="sign_in">
+                <div class="input_field">
+                    <input type="email" placeholder="E-mail" class="input">
+                </div>
+                <div class="input_field">
+                    <input type="password" placeholder="Password" class="input">
+                </div>
+                <div class="btn"><input type="submit" value="Sign In"></div>
+            </div>
+            <div class="sign_up">
+                <div class="input_field">
+                    <input type="text" placeholder="Username" class="input">
+                </div>
+                <div class="input_field">
+                    <input type="email" placeholder="E-mail" class="input">
+                </div>
+                <div class="input_field">
+                    <input type="password" placeholder="Password" class="input">
+                </div>
+                <div class="btn"><input type="submit" value="Sign Up"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" ></script>
+    <script>
+        $(document).ready(function(){
+            $('.sign_up').hide();
+            $('.sign_in_li').addClass("active");
+
+            $('.sign_up_li').click(function()
+            {
+                $('.sign_up').show();
+                $('.sign_in').hide();
+                $(this).addClass("active");
+                $('.sign_in_li').removeClass("active");
+            });
+
+            $('.sign_in_li').click(function()
+            {
+                $('.sign_in').show();
+                $('.sign_up').hide();
+                $(this).addClass("active");
+                $('.sign_up_li').removeClass("active");
+            });
+        });
+    </script>
+</body>
+</html>
