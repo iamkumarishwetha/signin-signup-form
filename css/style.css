@@ -84,7 +84,11 @@ body{
     font-size: 14px;
 }
 
-
+@media(max-width:375px){
+.wrapper {
+    max-width: 325px;
+    }
+}
 
 
 
